@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff;
+  background-color: $c_gray;
+}
+
+.slider {
+  max-width: $slider_area;
+  overflow: hidden;
+  margin: 20px auto;
+
+  &__track {
+    display: flex;
+
+    &__slide {
+      text-align: center;
+      padding: 20px;
+      background-color: $c_white;
+      margin: 0 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__controls {
+    text-align: right;
+    margin: 15px 0;
+
+    &__button {
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      background-color: $c_blue;
+      color: $c_white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    &__button:last-child {
+      margin-right: 0;
+    }
+
+    &__button:disabled {
+      background-color: $c_grey_dark;
+      cursor: not-allowed;
+    }
+    &__button:hover:not(:disabled) {
+      background-color: darken($c_blue, 10%);
+    }
+  }
+}

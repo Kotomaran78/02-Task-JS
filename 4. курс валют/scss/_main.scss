@@ -1,0 +1,36 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.exchange-rates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: $card-background;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: 20px;
+  min-width: 120px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}
